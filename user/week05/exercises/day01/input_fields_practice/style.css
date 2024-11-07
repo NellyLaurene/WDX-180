@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Branding colors */
+    --dark-red: #862e2a;
+    --light-blue: #7c9dbd;
+    --beige: #d0d0d0;
+    --grey-90: #282828;
+    --grey-50: #4c4c4c;
+    --grey-20: #767676;
+    --grey-10: #8f8f8f;
+
+    /* Functional colors */
+    --body-bg: var(--grey-90);
+    --input-text-color: var(--beige);
+    --placeholder-text-color: var(--grey-20);
+    --border-color: var(--grey-50);
+    --hover-color: var(--grey-10);
+    --focus-color: var(--light-blue);
+    --error-color: var(--dark-red);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--grey-90);
+    padding: 1rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    width: 80%;
+    max-width: 70rem;
+}
+.form__input--wrapper{
+    display: flex;
+    align-items: center;
+}
+.form__input {
+    background-color: inherit;
+    padding: 1rem;
+    width: 100%;
+    margin: 1rem 1.5rem 1rem 1rem;
+    outline: none;
+    border:3px solid var(--border-color);
+    color: var(--input-text-color);
+    font-size: 1.1rem;
+}
+.form__input::placeholder, .form__maxLength{
+    color: var(--placeholder-text-color);
+    font-size: 1.1rem;
+}
+.form__maxLength{
+    width: 30%;
+}
+
+.form__label{
+    color: var(--beige);
+    margin-left: 1rem;
+}
+.form__input--hover:hover{
+    border:3px solid var(--hover-color); 
+}
+.form__input--focus:focus{
+    border:3px solid var(--focus-color); 
+}
+.form__input:invalid{
+    border:3px solid var(--error-color); 
+}
+.form__input:invalid::placeholder{
+    content: 'Ops! There is a validation error! More characters than the allowed';
+}
+.form__button{
+    position: absolute;
+    bottom: 90px;
+    padding: 1rem;
+    background-color: var(--error-color);
+    color: var(--input-text-color);
+    outline: none;
+    border: none;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    display: none;
+}
+.form__input:invalid + .form__button{
+    display: block;
+}
+
+@media screen and (max-width: 774px) {
+    body{
+        font-size: 1rem;
+    }
+    .form__input::placeholder, .form__maxLength{
+        font-size: 1rem;
+    }
+    .form__maxLength{
+        width: 40%;
+    }
+    .form__button{
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 597px) {
+    body{
+        font-size: 0.8rem;
+    }
+    .form__input {
+        background-color: inherit;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+    .form__input::placeholder, .form__maxLength{
+        font-size: 0.8rem;
+    }
+}
