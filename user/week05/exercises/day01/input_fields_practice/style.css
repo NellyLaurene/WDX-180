@@ -94,7 +94,7 @@ body{
 
 @media screen and (max-width: 774px) {
     body{
-        font-size: 1rem;
+        font-size: 1npxrem;
     }
     .form__input::placeholder, .form__maxLength{
         font-size: 1rem;
