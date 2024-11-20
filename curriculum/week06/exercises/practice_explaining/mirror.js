@@ -3,13 +3,19 @@
 /* Mirror
 
   Data In:
-
+    A text
 
   Data Out:
-
+    Data that will be outputed is our text but with ' | ' that will separate a mirrored text with the original text
 
   Test Cases:
-
+    'NELLY' --> 
+                'N' --> 'N | N'
+                'E' --> 'EN | NE'
+                'L' --> 'LEN | NEL'
+                'L' --> 'LLEN | NELL'
+                'Y' --> 'YLLEN | NELLY'
+    '' --> 'enter some text to mirror'
 
 */
 

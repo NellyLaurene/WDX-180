@@ -3,13 +3,14 @@
 /* Flip Five
 
   Data In:
-
+    A string with 5 characters
 
   Data Out:
-
+    Data that will come out is our 5 characters string but in a reverse order
 
   Test Cases:
-
+    'abcde' --> 'edcba'
+    'aa' --> 'nope, try again.'
 
 */
 

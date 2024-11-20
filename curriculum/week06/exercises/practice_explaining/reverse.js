@@ -3,13 +3,20 @@
 /* Reverse
 
   Data In:
-
+    A text is entered
 
   Data Out:
-
+    It will output our text that was entered but in reverse order
 
   Test Cases:
-
+    'Nelly' -->
+        'N' - 'N'
+        'e' - 'eN'
+        'l' - 'leN'
+        'l' - 'lleN'
+        'y' - 'ylleN'
+      Output: Nelly -> ylleN
+    null --> enter some text to reverse
 
 */
 

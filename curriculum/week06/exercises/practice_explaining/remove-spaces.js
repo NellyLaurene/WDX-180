@@ -3,13 +3,15 @@
 /* Remove Spaces
 
   Data In:
-
+    A text is entered
 
   Data Out:
-
+    The text with spaces and the text when the spaces is removed
 
   Test Cases:
-
+    'My name is Nelly' --> before: My name is Nelly
+                           after: MynameisNelly
+    null --> 'enter some text, all the spaces will be removed'
 
 */
 
