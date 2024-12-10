@@ -10,8 +10,11 @@ whenFormDataChanges('______', () => {
   console.log('\n--- form data changed ---');
 
   // --- read user input ---
+  let text = readString('last')
 
   // --- create a greeting ---
+  let greetingText = 'Hello '+text+' !!'
 
   // --- display the greeting ---
+  displayString('greeting', greetingText)
 });
