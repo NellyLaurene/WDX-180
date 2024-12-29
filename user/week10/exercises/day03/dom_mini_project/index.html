@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>30DaysOfJavaScript:21 Day </title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1>Asabeneh Yetayeh challenges in <span>2020</span></h1>
+		<h2>30DaysOfJavaScript Challenge</h2>
+		<h3 id="datetime"></h3>
+		<ul>
+			<li>30DaysOfPython Challenge Done</li>
+			<li>30DaysOfJavaScript Challenge Ongoing</li>
+			<li>30DaysOfReact Challenge Coming</li>
+			<li>30DaysOfFullStack Challenge Coming</li>
+			<li>30DaysOfDataAnalysis Challenge Coming</li>
+			<li>30DaysOfReactNative Challenge Coming</li>
+			<li>30DaysOfMachineLearning Challenge Coming</li>
+		</ul>
+	</div>
+
+	<script>
+		function updateDateTime() {
+			const now = new Date();
+			const currentDateTime = now.toLocaleString();
+			const date = document.getElementById('datetime');
+			const theYear = document.querySelector('span');
+			date.textContent = currentDateTime;
+		}
+
+		function changeColor(){
+			const colorArray = ['A', 'B', 'C', 'D', 'E', 'F', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+			let color1 = "#";
+			let color2 = "#";
+			for(let i=0; i<6; i++) {
+				let random1 = Math.floor(Math.random()*colorArray.length);
+				let random2 = Math.floor(Math.random()*colorArray.length);
+				color1 += `${colorArray[random1]}`;
+				color2 += `${colorArray[random2]}`;
+			}
+			return[color1, color2];
+		}
+
+		setInterval(() => {
+			const colors = changeColor();
+			const theYear = document.querySelector('span');
+			const date = document.getElementById('datetime');
+
+			theYear.style.color = colors[1];
+			date.style.backgroundColor= colors[0];
+
+		}, 1000)
+
+		setInterval(updateDateTime, 1000);
+
+		const wrapper = document.querySelector('.wrapper');
+		const heading1 = document.querySelector('h1');
+		const theYear = document.querySelector('span');
+		const heading2 = document.querySelector('h2');
+		const date = document.getElementById('datetime');
+		const list = document.querySelectorAll('li');
+
+		wrapper.style.display='flex'
+		wrapper.style.flexDirection='column'
+		wrapper.style.alignItems='center'
+		wrapper.style.fontFamily='Arial, sans serif'
+
+		theYear.style.fontSize = '62px';
+
+		date.style.margin='0px'
+		date.style.padding='10px 20px'
+
+		heading2.style.fontWeight='normal'
+		heading2.style.textDecoration='underline'
+
+		for(let i=0; i<list.length; i++){
+			list[i].style.listStyle = 'none';
+			list[i].style.padding = '1rem 8rem 1rem 2rem';
+			list[i].style.margin = '4px';
+
+			if(list[i].textContent.includes('Coming')){
+				list[i].style.backgroundColor = '#eb695b';
+			} else if (list[i].textContent.includes('Done')) {
+				list[i].style.backgroundColor = '#5bbc7a';
+			} else {
+				list[i].style.backgroundColor = '#f7dc5c';
+			}
+
+		}
+
+
+	</script>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
